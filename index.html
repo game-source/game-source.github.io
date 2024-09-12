@@ -6,21 +6,11 @@
 <body>
     <h1>Loading</h1>
     <script>
-        var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://ip-api.com/json/', true);
-xhr.onreadystatechange = function () {
-  if (xhr.readyState === 4 && xhr.status === 200) {
-    var data = JSON.parse(xhr.responseText);
-    console.log(data);
-    window.alert(data);
-
-  }
-};
-xhr.send();
+       
     function GetCountry1() {
 
         return new Promise((resolve, reject) => {
-            fetch(http://ip-api.com/json/, {
+            fetch(https://pro.ip-api.com/?key=czSLTEfhFW1aOBZ, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
