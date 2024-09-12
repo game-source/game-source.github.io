@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>页面标题</title>
+    <title>loading</title>
 </head>
 <body>
-    <h1>这是一个标题</h1>
-    <p>这是一个段落。</p>
-    <a href="http://www.example.com">这是一个链接</a>
+    <h1>Loading</h1>
+    <script>
+        fetch('https://ipapi.co/json/')
+  .then((response) => response.json())
+  .then((data) => {
+    const countryCode = data.country_code;
+    console.log(countryCode);
+  });
+    </script>
 </body>
 </html>
