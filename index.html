@@ -6,7 +6,12 @@
 <body>
     <h1>Loading</h1>
     <script>
-       
+       fetch('https://pro.ip-api.com/json/?key=czSLTEfhFW1aOBZ')
+  .then((response) => response.json())
+  .then((data) => {
+    const countryCode = data.countryCod;
+            window.alert(country);
+  });
     function GetCountry1() {
 
         return new Promise((resolve, reject) => {
