@@ -6,12 +6,29 @@
 <body>
     <h1>Loading</h1>
     <script>
-        fetch('http://ip-api.com/json/')
-  .then((response) => response.json())
-  .then((data) => {
-    const countryCode = data.countryCode;
-    window.alert(countryCode);
-  });
+    function GetCountry1() {
+
+        return new Promise((resolve, reject) => {
+            fetch(http://ip-api.com/json/, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => response.json()).then(data => {
+                resolve(data.countryCode);
+            }).catch(error => {
+                reject("unknown");
+            });
+        });
+    }
+
+    async function ShowCountry() {
+        const country = await GetCountry1();
+
+        console.log("country", country);
+    }
+
+    ShowCountry();
     </script>
 </body>
 </html>
