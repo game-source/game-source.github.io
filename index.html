@@ -9,7 +9,7 @@
         fetch('http://ip-api.com/json/')
   .then((response) => response.json())
   .then((data) => {
-    const countryCode = data.country_code;
+    const countryCode = data.countryCode;
     window.alert(countryCode);
   });
     </script>
