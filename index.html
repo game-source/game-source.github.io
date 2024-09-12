@@ -10,7 +10,11 @@
   .then((response) => response.json())
   .then((data) => {
     const countryCode = data.countryCode;
-            window.alert(countryCode);
+            if (countryCode.includes('HK')) {
+  console.log("hk");
+} else {
+  console.log("字符串不包含子字符串");
+}
   });
     
     </script>
